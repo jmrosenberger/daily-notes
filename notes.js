@@ -1,3 +1,6 @@
+const searchTerm = "still confused";
+
+
 const notes = [
     {
         id: 1,
@@ -44,15 +47,31 @@ notes.push(noteAboutToday);
 // }
 
 
+
+// ----commented out to reduce output in terminal
+//     without overwriting previous work----
+
+
+// for (const note of notes) {
+//     console.log(`Note ${note.id}
+    
+//     ${note.date}
+//     I learned ${note.subject}
+//     I spent ${note.timeSpent} working on it
+//     I felt ${note.feeling}
+    
+//     ----------
+//     `)
+    
+// }
+
+
+
+
 for (const note of notes) {
-    console.log(`Note ${note.id}
-    
-    ${note.date}
-    I learned ${note.subject}
-    I spent ${note.timeSpent} working on it
-    I felt ${note.feeling}
-    
-    ----------
-    `)
-    
+    if (searchTerm === note.feeling) {
+        console.log(note)
+    } else {
+        console.log("try again buddy")
+    }
 }
