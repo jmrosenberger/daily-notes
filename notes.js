@@ -1,35 +1,58 @@
 const notes = [
     {
         id: 1,
-        subject: "GitHub",
         date: "July 14, 2021",
-        feeling: "lost",
-        timeSpent: 300
+        subject: "GitHub",
+        timeSpent: 300,
+        feeling: "lost"
     },
     {
         id: 2,
-        subject: "DevTools",
         date: "July 13, 2021",
-        feeling: "still confused",
-        timeSpent: 15
+        subject: "DevTools",
+        timeSpent: 15,
+        feeling: "still confused"
     }
 ];
 
 const noteAboutToday = {
     id: 3,
-    subject: "adding objects to arrays",
     date: "July 16, 2021",
-    feeling: "pretty good",
-    timeSpent: 240
+    subject: "adding objects to arrays",
+    timeSpent: 240,
+    feeling: "pretty good"
 };
 
 notes.push(noteAboutToday);
 
 
-for (const note of notes) {
-    console.log(note)
-};
+// ----commented out to reduce output in terminal
+//     without overwriting previous work----
+
+// for (const note of notes) {      
+//     console.log(note)
+// };
+
+
+
+
+// ----commented out to reduce output in terminal
+//     without overwriting previous work----
+
+// for (const note of notes) {
+//     console.log(`When learning ${note.subject}, I realize I still feel ${note.feeling}, even though I spent ${note.timeSpent} minutes on ${note.date} trying to learn more.`)
+// }
+
 
 for (const note of notes) {
-    console.log(`When learning ${note.subject}, I realize I still feel ${note.feeling}, even though I spent ${note.timeSpent} minutes on ${note.date} trying to learn more.`)
+    console.log(`Note ${note.id}
+    
+    ${note.date}
+    I learned ${note.subject}
+    I spent ${note.timeSpent} working on it
+    I felt ${note.feeling}
+    
+    ----------
+    `)
+    
 }
