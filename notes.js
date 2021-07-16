@@ -13,7 +13,18 @@ const notes = [
         feeling: "still confused",
         timeSpent: 15
     }
-]
+];
+
+const noteAboutToday = {
+    id: 3,
+    subject: "adding objects to arrays",
+    date: "July 16, 2021",
+    feeling: "pretty good",
+    timeSpent: 240
+};
+
+notes.push(noteAboutToday);
+
 
 for (const note of notes) {
     console.log(note)
