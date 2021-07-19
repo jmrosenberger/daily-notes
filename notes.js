@@ -85,6 +85,7 @@ const createNote = (note) => {
     const idForNewNote = maxId + 1
 
     note.id = idForNewNote
+    note.dateCreated = new Date()
     notes.push(note)
 
 }
@@ -95,8 +96,17 @@ const newNote = {
     timeSpent: 40,
     feeling: "pretty good"
 }
+const newestNote = {
+    date: "July 19, 2021",
+    subject: "adding dateCreated object, assessment",
+    timeSpent: 40,
+    feeling: "pretty great"
+}
+
 
 
 createNote(newNote)
+createNote(newestNote)
+
 
 console.log(notes)
